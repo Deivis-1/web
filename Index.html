@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Paradise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay">
+            <nav>
+                <div class="logo">Hotel Paradise</div>
+                <ul class="nav-links">
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#rooms">Habitaciones</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#register">Registro</a></li>
+                </ul>
+            </nav>
+            <div class="hero-content">
+                <h1>Bienvenido a Hotel Paradise</h1>
+                <p>Tu refugio de lujo en el corazón de la ciudad.</p>
+                <a href="#rooms" class="btn">Ver Habitaciones</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Sobre Nosotros</h2>
+                <p>En Hotel Paradise, ofrecemos una experiencia de alojamiento inigualable con comodidades de primera clase y un servicio excepcional. Ubicado estratégicamente en el centro de la ciudad, somos el lugar perfecto tanto para viajeros de negocios como para turistas.</p>
+            </div>
+        </section>
+
+        <section id="rooms" class="section bg-light">
+            <div class="container">
+                <h2>Habitaciones</h2>
+                <form id="booking-form">
+                    <div class="rooms-grid">
+                        <div class="room-card">
+                            <img src="images/standard-room.jpg" alt="Habitación Estándar">
+                            <div class="room-info">
+                                <h3>Habitación Estándar</h3>
+                                <p class="price" id="price-standard"></p>
+                                <input type="radio" name="room" value="standard" required> Seleccionar
+                            </div>
+                        </div>
+                        <div class="room-card">
+                            <img src="images/deluxe-room.jpg" alt="Habitación Deluxe">
+                            <div class="room-info">
+                                <h3>Habitación Deluxe</h3>
+                                <p class="price" id="price-deluxe"></p>
+                                <input type="radio" name="room" value="deluxe" required> Seleccionar
+                            </div>
+                        </div>
+                        <div class="room-card">
+                            <img src="images/suite-room.jpg" alt="Suite Presidencial">
+                            <div class="room-info">
+                                <h3>Suite Presidencial</h3>
+                                <p class="price" id="price-suite"></p>
+                                <input type="radio" name="room" value="suite" required> Seleccionar
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Servicios Adicionales</h3>
+                    <label>
+                        <input type="checkbox" name="services" value="spa"> Spa y Bienestar (+$50)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="services" value="gym"> Gimnasio (+$30)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="services" value="gourmet"> Restaurante Gourmet (+$100)
+                    </label>
+                    <br><br>
+                    <button type="submit" class="btn">Calcular Total</button>
+                </form>
+                <p id="total-price" class="total-price"></p>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <h2>Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-spa"></i>
+                        <h3>Spa y Bienestar</h3>
+                        <p>Relájate y rejuvenece con nuestros exclusivos tratamientos de spa.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Gimnasio</h3>
+                        <p>Mantén tu rutina de ejercicios en nuestro gimnasio totalmente equipado.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Restaurante Gourmet</h3>
+                        <p>Disfruta de una exquisita gastronomía preparada por chefs de renombre.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-wifi"></i>
+                        <h3>Conexión Wi-Fi Gratuita</h3>
+                        <p>Mantente conectado con nuestra rápida y confiable conexión a internet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section bg-light">
+            <div class="container">
+                <h2>Contacto</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Teléfono: +123 456 789</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Email: <a href="mailto:contacto@hotelparadise.com">contacto@hotelparadise.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="register" class="section">
+            <div class="container">
+                <h2>Registro</h2>
+                <form id="register-form">
+                    <input type="text" id="name" placeholder="Nombre" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <button type="submit" class="btn">Registrarse</button>
+                </form>
+                <p id="register-message" class="register-message"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hotel Paradise. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome para íconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
